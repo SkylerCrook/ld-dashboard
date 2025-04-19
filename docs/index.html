@@ -1,15 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Our Dashboard</title>
-  <link rel="stylesheet" href="assets/style.css"/>
-</head>
-<body>
-  <section id="weather">Loading weather…</section>
-  <section id="timeTogether">Calculating time together…</section>
-  <img id="photo" alt="Memory"/>
-  <script src="assets/app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Always Together</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <img class="main-icon" src="images/cover1.jpg" alt="" />
+    <h1 class="title">Skyler <red>&hearts;</red> Layla</h1>
+
+    <div class="date-card">
+      <!--TODO: Placeholder for date api-->
+      <p>Together for 1089 days</p>
+    </div>
+
+    <div class="location_section">
+      <!--Skyler-->
+      <div class="person-card skyler-card">
+        <img class="profile-icon" src="images/skyler_pfp.jpg" alt="" />
+        <div class="name">Skyler</div>
+        <div class="sunny-icon">☀️</div>
+        <div class="location">San Diego</div>
+        <div class="time">2:10pm</div>
+        <div class="temperature">70° F</div>
+        <div class="condition">Sunny</div>
+      </div>
+
+      <div class="heart-hands">🫶</div>
+
+      <!--Layla-->
+      <div class="person-card layla-card">
+        <img class="profile-icon" src="images/layla_pfp.jpg" alt="" />
+        <div class="name">Layla</div>
+        <div class="snowing-icon">🌨️</div>
+        <div class="location">Honolulu</div>
+        <div class="time">11:10am</div>
+        <div class="temperature">15° F</div>
+        <div class="condition">Snowing</div>
+      </div>
+    </div>
+
+
+    <div class="spacer"></div>
+
+
+    <div class="bg-white shadow-md rounded-lg p-6">
+      <div class="conveyor-belt-container">
+          <div class="conveyor-belt">
+              <img src="images/cover1.jpg" alt="Alternative fun picture of California">
+              <img src="images/skyler_pfp.jpg" alt="Alternative fun picture of Hawaii">
+              <img src="images/layla_pfp.jpg" alt="Yet another alternative fun picture of Hawaii">
+              <img src="images/cover1.jpg" alt="Alternative fun picture of California">
+              <img src="images/skyler_pfp.jpg" alt="Alternative fun picture of Hawaii">
+              <img src="images/layla_pfp.jpg" alt="Yet another alternative fun picture of Hawaii">
+              </div>
+      </div>
+      <div class="image-controls">
+          <button id="scroll-left-btn">Scroll Left</button>
+          <button id="scroll-right-btn">Scroll Right</button>
+      </div>
+  </div>
+
+
+  <div class="spacer"></div>
+
+
+  <section class="music-section">
+    <div class="music-header">
+        <h2 class="music-title">Our Favorite Music</h2>
+    </div>
+    <div class="music-blocks">
+        <div class="music-block">
+            <h3 class="music-heading">Skylers's Most Recently Listened To</h3>
+            <div class="song-item">
+                <img class="song-cover" src="https://via.placeholder.com/150" alt="Album Cover 1" />
+                <div class="song-info">
+                    <h3 class="song-title">Song Title 1</h3>
+                    <p class="song-artist">Artist Name 1</p>
+                </div>
+                <div class="play-button">▶️</div>
+            </div>
+            <div class="song-item">
+                <img class="song-cover" src="https://via.placeholder.com/150" alt="Album Cover 2" />
+                <div class="song-info">
+                    <h3 class="song-title">Song Title 2</h3>
+                    <p class="song-artist">Artist Name 2</p>
+                </div>
+                <div class="play-button">▶️</div>
+            </div>
+        </div>
+        <div class="music-block">
+            <h3 class="music-heading">Laylas's Most Recently Listened To</h3>
+            <div class="song-item">
+                <img class="song-cover" src="https://via.placeholder.com/150" alt="Album Cover 3" />
+                <div class="song-info">
+                    <h3 class="song-title">Song Title 3</h3>
+                    <p class="song-artist">Artist Name 3</p>
+                </div>
+                <div class="play-button">▶️</div>
+            </div>
+            <div class="song-item">
+                <img class="song-cover" src="https://via.placeholder.com/150" alt="Album Cover 4" />
+                <div class="song-info">
+                    <h3 class="song-title">Song Title 4</h3>
+                    <p class="song-artist">Artist Name 4</p>
+                </div>
+                <div class="play-button">▶️</div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+  </body>
 </html>

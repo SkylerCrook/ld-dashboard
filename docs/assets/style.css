@@ -1,0 +1,292 @@
+/*Weather*/
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: lavender;
+    margin: 20px;
+}
+
+red {
+    color: red;
+}
+
+.title {
+    align-items: center;
+}
+
+.location_section {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.date-card {
+    background-color: lavenderblush;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.person-card {
+    background-color: lavenderblush;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.main-icon {
+    border-radius: 50%;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    object-fit: cover;
+}
+
+.profile-icon {
+    background-color: gold;
+    color: black;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin: 0 auto 10px;
+    object-fit: cover;
+}
+
+.name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.location {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.time {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.temperature {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.condition {
+    color: #333;
+}
+
+.sunny-icon {
+    font-size: 3em;
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.snowing-icon {
+    font-size: 3em;
+    color: navy;
+    margin-bottom: 10px;
+}
+
+.heart-hands {
+    font-size: 2em;
+}
+
+.skyler-card {
+    border: 2px solid lightgoldenrodyellow;
+}
+
+.layla-card {
+    border: 2px solid lavenderblush;
+}
+
+
+
+/*Spacer*/
+.spacer {
+    height: 50px;
+}
+
+
+
+/*Photos*/
+
+.conveyor-belt-container {
+    width: 100%;
+    overflow: hidden; /* Hide overflowing images */
+    position: relative;
+    padding-bottom: 1rem; /* Add some padding below the images */
+    width: 800px;
+}
+
+.conveyor-belt {
+    display: flex;
+    white-space: nowrap; /* Prevent images from wrapping to the next line */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for scrolling */
+    margin-bottom: 1rem; /* Add margin below the image container */
+}
+
+.conveyor-belt img {
+    width: 300px; /* Adjust as needed, make sure images have a fixed width */
+    height: 200px; /* Adjust as needed, ensure all images have same height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    margin-right: 1rem; /* Add spacing between images */
+    border-radius: 0.5rem;
+}
+
+/* Ensure the last image doesn't have right margin */
+.conveyor-belt img:last-child {
+    margin-right: 0;
+}
+
+.image-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.image-controls button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    background-color: #e2e8f0;
+    color: #1a202c;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.image-controls button:hover {
+    background-color: #cbd5e0;
+}
+
+ .image-controls button:disabled {
+    background-color: #f7fafc; /* Even lighter gray when disabled */
+    color: #a0aec0; /* Gray out the text */
+    cursor: not-allowed;
+}
+
+
+/*Music*/
+.music-section {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    background-color: #f7fafc;
+}
+
+.music-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.music-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.music-blocks {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+}
+
+.music-block {
+    width: 45%;
+    margin-bottom: 2rem; /* Add space between blocks */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.song-item {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 250px; /* Give each song item a fixed width */
+    text-align: center;
+}
+
+.song-item:last-child {
+    margin-bottom: 0;
+}
+
+.song-cover {
+    width: 150px;          /* Make cover image larger */
+    height: 150px;
+    border-radius: 0.25rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    background-color: #f0f0f0;
+}
+
+.song-info {
+    flex: none;
+    width: 100%;
+}
+
+.song-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #1a202c;
+    margin-bottom: 0.25rem;
+}
+
+.song-artist {
+    font-size: 0.875rem;
+    color: #718096;
+}
+
+.play-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #63b3ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    align-self: center;
+}
+
+.play-button:hover {
+    background-color: #3182ce;
+}
