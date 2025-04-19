@@ -1,2 +1,2 @@
 # ld-dashboard
-Long DIstance Dashboard
+Long Distance Dashboard
