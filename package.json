@@ -1,0 +1,10 @@
+{
+    "name": "ld-dashboard",
+    "scripts": {
+      "build": "cp -r public dist",
+      "start": "netlify dev"
+    },
+    "dependencies": {
+      "node-fetch": "^2.6.1"
+    }
+  }
