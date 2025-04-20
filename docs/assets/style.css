@@ -145,52 +145,11 @@ red {
     border-radius: 0.5rem;
 }
 
-/*.conveyor-belt-img {
-    flex: 0 0 auto;
-    height: 100%;
-    margin-right: 10px;
-    object-fit: cover;
-  }*/
-
   @keyframes scroll {
     from { transform: translateX(0); }
     to   { transform: translateX(calc(-1 * var(--belt-width) / 2)); }
   }
 
-
-/* Ensure the last image doesn't have right margin */
-.conveyor-belt img:last-child {
-    margin-right: 0;
-}
-
-.image-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-}
-
-.image-controls button {
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
-    background-color: #e2e8f0;
-    color: #1a202c;
-    border: none;
-    border-radius: 0.375rem;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    transition: background-color 0.3s ease;
-}
-
-.image-controls button:hover {
-    background-color: #cbd5e0;
-}
-
- .image-controls button:disabled {
-    background-color: #f7fafc; /* Even lighter gray when disabled */
-    color: #a0aec0; /* Gray out the text */
-    cursor: not-allowed;
-}
 
 
 /*Music*/

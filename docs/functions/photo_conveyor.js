@@ -1,16 +1,15 @@
+// Show Photo Conveyor
 (async function() {
-    // Fetch the static manifest that GitHub Actions writes
     let imageUrls;
     try {
       const res = await fetch('conveyor_images.json');
       if (!res.ok) throw new Error(`Could not fetch images.json (${res.status})`);
-      imageUrls = await res.json();   // → [ "docs/images/conveyor/foo.webp", … ]
+      imageUrls = await res.json();
     } catch (e) {
       console.error('Error loading image manifest:', e);
       return;
     }
   
-    // 2️⃣ Fisher–Yates shuffle
     function shuffle(a) {
       for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -18,7 +17,7 @@
       }
     }
   
-    // 3️⃣ Build & animate
+    // Build & animate
     function buildBelt() {
       shuffle(imageUrls);
       const belt = document.querySelector('.conveyor-belt');

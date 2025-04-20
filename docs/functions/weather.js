@@ -1,6 +1,6 @@
-// weather.js
+// Get Weather
 document.addEventListener('DOMContentLoaded', () => {
-  const apiKey  = 'd1d80979227d4d6499253413252004';            // ← paste your key here
+  const apiKey  = 'd1d80979227d4d6499253413252004';
   const endpoint = 'https://api.weatherapi.com/v1/current.json';
 
   const intervalMs = 30 * 60 * 1000;    // 30 minutes
@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // do it now, and again every 10 minutes
   function updateAll() {
     cards.forEach(fetchAndRender);
   }
@@ -49,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     intervalId = null;
   }
 
-  // Kick off the first run
   startPolling();
 
   // Pause when the tab is hidden, resume when visible

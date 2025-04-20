@@ -1,11 +1,9 @@
 import os, json
 
-# Where the images live on disk:
+# image location:
 IMG_DIR = 'docs/images/conveyor'
-
-# How they should appear in your site URLs:
+# Necessary site URL:
 URL_DIR = 'images/conveyor'
-
 # Where to write the manifest:
 OUT_FILE = 'docs/conveyor_images.json'
 
@@ -22,4 +20,4 @@ manifest = [f"{URL_DIR}/{fname}" for fname in files]
 with open(OUT_FILE, 'w') as fp:
     json.dump(manifest, fp, indent=2)
 
-print(f"✔ Wrote {len(manifest)} entries to {OUT_FILE}")
+print(f"Wrote {len(manifest)} entries to {OUT_FILE}")

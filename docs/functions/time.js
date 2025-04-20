@@ -1,4 +1,4 @@
-// clock.js
+// Get Times
 document.addEventListener('DOMContentLoaded', () => {
     // grab the two .time elements
     const skylerTimeEl = document.querySelector('.skyler-card .time');
