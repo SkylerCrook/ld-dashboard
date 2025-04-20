@@ -3,10 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const apiKey  = 'd1d80979227d4d6499253413252004';            // ← paste your key here
   const endpoint = 'https://api.weatherapi.com/v1/current.json';
 
+  const intervalMs = 30 * 60 * 1000;    // 30 minutes
+  let intervalId   = null;              // for clearing later
+
   // Which card to update, and what q-param to send
   const cards = [
-    { selector: '.skyler-card', query: 'San Diego' },
-    { selector: '.layla-card',  query: 'Honolulu' }
+    { selector: '.skyler-card', query: '92037' },
+    { selector: '.layla-card',  query: '96821' }
   ];
 
   // Fetch from WeatherAPI, update icon/temp/condition
@@ -33,6 +36,30 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateAll() {
     cards.forEach(fetchAndRender);
   }
-  updateAll();
-  setInterval(updateAll, 10 * 60 * 1000);
+  
+  // Start polling immediately and then every intervalMs
+  function startPolling() {
+    updateAll();
+    intervalId = setInterval(updateAll, intervalMs);
+  }
+
+  // Stop the polling loop
+  function stopPolling() {
+    clearInterval(intervalId);
+    intervalId = null;
+  }
+
+  // Kick off the first run
+  startPolling();
+
+  // Pause when the tab is hidden, resume when visible
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopPolling();
+      console.log('Polling paused (tab hidden)');
+    } else if (!intervalId) {
+      console.log('Polling resumed (tab visible)');
+      startPolling();
+    }
+  });
 });
