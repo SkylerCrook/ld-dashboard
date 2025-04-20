@@ -12,7 +12,7 @@
 
     <div class="date-card">
       <!--TODO: Placeholder for date api-->
-      <p>Together for 1089 days</p>
+      <p id="daysTogether"></p>
     </div>
 
     <div class="location_section">
@@ -20,11 +20,11 @@
       <div class="person-card skyler-card">
         <img class="profile-icon" src="images/skyler_pfp.jpg" alt="" />
         <div class="name">Skyler</div>
-        <div class="sunny-icon">☀️</div>
+        <img class="weather-icon" src="" alt="Skyler’s weather" />
         <div class="location">San Diego</div>
-        <div class="time">2:10pm</div>
-        <div class="temperature">70° F</div>
-        <div class="condition">Sunny</div>
+        <div class="time">--:--:--</div>
+        <div class="temperature">--° F</div>
+        <div class="condition">--</div>
       </div>
 
       <div class="heart-hands">🫶</div>
@@ -33,84 +33,119 @@
       <div class="person-card layla-card">
         <img class="profile-icon" src="images/layla_pfp.jpg" alt="" />
         <div class="name">Layla</div>
-        <div class="snowing-icon">🌨️</div>
+        <img class="weather-icon" src="" alt="Layla’s weather" />
         <div class="location">Honolulu</div>
-        <div class="time">11:10am</div>
-        <div class="temperature">15° F</div>
-        <div class="condition">Snowing</div>
+        <div class="time">--:--:--</div>
+        <div class="temperature">--° F</div>
+        <div class="condition">--</div>
       </div>
     </div>
-
 
     <div class="spacer"></div>
 
-
-    <div class="bg-white shadow-md rounded-lg p-6">
+    <div class="images-container">
       <div class="conveyor-belt-container">
-          <div class="conveyor-belt">
-              <img src="images/cover1.jpg" alt="Alternative fun picture of California">
-              <img src="images/skyler_pfp.jpg" alt="Alternative fun picture of Hawaii">
-              <img src="images/layla_pfp.jpg" alt="Yet another alternative fun picture of Hawaii">
-              <img src="images/cover1.jpg" alt="Alternative fun picture of California">
-              <img src="images/skyler_pfp.jpg" alt="Alternative fun picture of Hawaii">
-              <img src="images/layla_pfp.jpg" alt="Yet another alternative fun picture of Hawaii">
-              </div>
+        <div class="conveyor-belt">
+          <img
+            src="images/cover1.jpg"
+            alt="Alternative fun picture of California"
+          />
+          <img
+            src="images/skyler_pfp.jpg"
+            alt="Alternative fun picture of Hawaii"
+          />
+          <img
+            src="images/layla_pfp.jpg"
+            alt="Yet another alternative fun picture of Hawaii"
+          />
+          <img
+            src="images/cover1.jpg"
+            alt="Alternative fun picture of California"
+          />
+          <img
+            src="images/skyler_pfp.jpg"
+            alt="Alternative fun picture of Hawaii"
+          />
+          <img
+            src="images/layla_pfp.jpg"
+            alt="Yet another alternative fun picture of Hawaii"
+          />
+        </div>
       </div>
       <div class="image-controls">
-          <button id="scroll-left-btn">Scroll Left</button>
-          <button id="scroll-right-btn">Scroll Right</button>
+        <button id="scroll-left-btn">Scroll Left</button>
+        <button id="scroll-right-btn">Scroll Right</button>
       </div>
-  </div>
+    </div>
 
+    <div class="spacer"></div>
 
-  <div class="spacer"></div>
-
-
-  <section class="music-section">
-    <div class="music-header">
+    <section class="music-section">
+      <div class="music-header">
         <h2 class="music-title">Our Favorite Music</h2>
-    </div>
-    <div class="music-blocks">
+      </div>
+      <div class="music-blocks">
         <div class="music-block">
-            <h3 class="music-heading">Skylers's Most Recently Listened To</h3>
-            <div class="song-item">
-                <img class="song-cover" src="https://via.placeholder.com/150" alt="Album Cover 1" />
-                <div class="song-info">
-                    <h3 class="song-title">Song Title 1</h3>
-                    <p class="song-artist">Artist Name 1</p>
-                </div>
-                <div class="play-button">▶️</div>
+          <h3 class="music-heading">Skylers's Listening To</h3>
+          <div class="song-item">
+            <img
+              class="song-cover"
+              src="https://via.placeholder.com/150"
+              alt="Album Cover 1"
+            />
+            <div class="song-info">
+              <h3 class="song-title">Song Title 1</h3>
+              <p class="song-artist">Artist Name 1</p>
             </div>
-            <div class="song-item">
-                <img class="song-cover" src="https://via.placeholder.com/150" alt="Album Cover 2" />
-                <div class="song-info">
-                    <h3 class="song-title">Song Title 2</h3>
-                    <p class="song-artist">Artist Name 2</p>
-                </div>
-                <div class="play-button">▶️</div>
+            <div class="play-button">▶️</div>
+          </div>
+          <div class="song-item">
+            <img
+              class="song-cover"
+              src="https://via.placeholder.com/150"
+              alt="Album Cover 2"
+            />
+            <div class="song-info">
+              <h3 class="song-title">Song Title 2</h3>
+              <p class="song-artist">Artist Name 2</p>
             </div>
+            <div class="play-button">▶️</div>
+          </div>
         </div>
+
+        <div class="hor_spacer"></div>
+
         <div class="music-block">
-            <h3 class="music-heading">Laylas's Most Recently Listened To</h3>
-            <div class="song-item">
-                <img class="song-cover" src="https://via.placeholder.com/150" alt="Album Cover 3" />
-                <div class="song-info">
-                    <h3 class="song-title">Song Title 3</h3>
-                    <p class="song-artist">Artist Name 3</p>
-                </div>
-                <div class="play-button">▶️</div>
+          <h3 class="music-heading">Laylas's Listening To</h3>
+          <div class="song-item">
+            <img
+              class="song-cover"
+              src="https://via.placeholder.com/150"
+              alt="Album Cover 3"
+            />
+            <div class="song-info">
+              <h3 class="song-title">Song Title 3</h3>
+              <p class="song-artist">Artist Name 3</p>
             </div>
-            <div class="song-item">
-                <img class="song-cover" src="https://via.placeholder.com/150" alt="Album Cover 4" />
-                <div class="song-info">
-                    <h3 class="song-title">Song Title 4</h3>
-                    <p class="song-artist">Artist Name 4</p>
-                </div>
-                <div class="play-button">▶️</div>
+            <div class="play-button">▶️</div>
+          </div>
+          <div class="song-item">
+            <img
+              class="song-cover"
+              src="https://via.placeholder.com/150"
+              alt="Album Cover 4"
+            />
+            <div class="song-info">
+              <h3 class="song-title">Song Title 4</h3>
+              <p class="song-artist">Artist Name 4</p>
             </div>
+            <div class="play-button">▶️</div>
+          </div>
         </div>
-    </div>
-</section>
-    
+      </div>
+    </section>
+    <script src="../functions/anniversary_date.js"></script>
+    <script src="../functions/time.js"></script>
+    <script src="../functions/weather.js"></script>
   </body>
 </html>
