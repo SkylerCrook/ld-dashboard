@@ -128,7 +128,6 @@ red {
     overflow: hidden; /* Hide overflowing images */
     position: relative;
     padding-bottom: 1rem; /* Add some padding below the images */
-    width: 800px;
 }
 
 .conveyor-belt {
@@ -157,7 +156,7 @@ red {
     from { transform: translateX(0); }
     to   { transform: translateX(calc(-1 * var(--belt-width) / 2)); }
   }
-  
+
 
 /* Ensure the last image doesn't have right margin */
 .conveyor-belt img:last-child {

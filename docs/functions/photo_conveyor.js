@@ -1,30 +1,16 @@
 (async function() {
-    // ←–––  Replace these with your own GitHub info  –––→
-    const owner = 'SkylerCrook';
-    const repo  = 'ld-dashboard';
-    const path  = 'docs/images/conveyor';
-  
-    // 1️⃣ Fetch the directory listing from GitHub’s REST API
-    async function fetchImageUrls() {
-      const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
-      const res    = await fetch(apiUrl);
-      if (!res.ok) throw new Error(`GitHub API error ${res.status}`);
-      const files = await res.json();
-      return files
-        .filter(f => /\.(jpe?g|png|webp)$/i.test(f.name))
-        .map(f => f.download_url);
-    }
-  
-    // 2️⃣ Pull in the list, then build+animate
+    // Fetch the static manifest that GitHub Actions writes
     let imageUrls;
     try {
-      imageUrls = await fetchImageUrls();
+      const res = await fetch('conveyor_images.json');
+      if (!res.ok) throw new Error(`Could not fetch images.json (${res.status})`);
+      imageUrls = await res.json();   // → [ "docs/images/conveyor/foo.webp", … ]
     } catch (e) {
-      console.error('Couldn’t load images from GitHub:', e);
+      console.error('Error loading image manifest:', e);
       return;
     }
   
-    // 3️⃣ Fisher–Yates shuffle
+    // 2️⃣ Fisher–Yates shuffle
     function shuffle(a) {
       for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -32,7 +18,7 @@
       }
     }
   
-    // 4️⃣ Build & kick off the conveyor
+    // 3️⃣ Build & animate
     function buildBelt() {
       shuffle(imageUrls);
       const belt = document.querySelector('.conveyor-belt');
@@ -50,13 +36,13 @@
       belt.innerHTML += belt.innerHTML;
   
       requestAnimationFrame(() => {
-        const fullWidth       = belt.scrollWidth;
-        const speedPxPerSec   = 20;
+        const fullWidth     = belt.scrollWidth;
+        const speedPxPerSec = 20;
         belt.style.setProperty('--belt-width', `${fullWidth}px`);
         belt.style.animationDuration = `${fullWidth / speedPxPerSec}s`;
       });
     }
   
-    document.addEventListener('DOMContentLoaded', buildBelt);
+    buildBelt();
   })();
   
