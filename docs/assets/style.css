@@ -92,16 +92,8 @@ red {
     color: #333;
 }
 
-.sunny-icon {
-    font-size: 3em;
-    color: orange;
-    margin-bottom: 10px;
-}
-
-.snowing-icon {
-    font-size: 3em;
-    color: navy;
-    margin-bottom: 10px;
+.weather-icon {
+    color: black;
 }
 
 .heart-hands {
@@ -142,7 +134,7 @@ red {
 .conveyor-belt {
     display: flex;
     white-space: nowrap; /* Prevent images from wrapping to the next line */
-    transition: transform 0.5s ease-in-out; /* Smooth transition for scrolling */
+    animation: scroll linear infinite;
     margin-bottom: 1rem; /* Add margin below the image container */
 }
 
@@ -153,6 +145,19 @@ red {
     margin-right: 1rem; /* Add spacing between images */
     border-radius: 0.5rem;
 }
+
+/*.conveyor-belt-img {
+    flex: 0 0 auto;
+    height: 100%;
+    margin-right: 10px;
+    object-fit: cover;
+  }*/
+
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(calc(-1 * var(--belt-width) / 2)); }
+  }
+  
 
 /* Ensure the last image doesn't have right margin */
 .conveyor-belt img:last-child {
